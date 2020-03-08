@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class MobSpawn : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class MobSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("FirstSpawn");
     }
 
     // Update is called once per frame
@@ -37,14 +38,14 @@ public class MobSpawn : MonoBehaviour
 
         while (!chk)
         {
-            float distanse = Random.Range(700f, 500f);
+            float distanse = Random.Range(7f, 5f);
             float degree = Random.Range(0f, 360f);
             pos = new Vector3(Mathf.Sin(Mathf.Deg2Rad*degree),Mathf.Cos(Mathf.Deg2Rad*degree))*distanse;
             Vector2 ans = pos;
             if (Mathf.Abs(pos.x)<37f&&Mathf.Abs(pos.y)<37f) chk = true;
         }
         obj = Instantiate(MobBase, pos, Quaternion.identity);
-//        obj.GetComponent<AIDestinationSetter>().target = Player.transform;
+        obj.GetComponent<AIDestinationSetter>().target = Player.transform;
     }
 
     IEnumerator FirstSpawn()
@@ -53,6 +54,7 @@ public class MobSpawn : MonoBehaviour
         for (int i = 0; i < firstMobNum; i++)
         {
             SpawnMob();
+            Debug.Log("OK");
             yield return new WaitForSeconds(spawnMobInterval);
         }
         
