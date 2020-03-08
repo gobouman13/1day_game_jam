@@ -85,4 +85,11 @@ public class Player : MonoBehaviour
         float rad = Mathf.Atan2(dy, dx);
         return rad * Mathf.Rad2Deg;
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Mob")
+        {
+			SceneManager.LoadScene(2);
+        }
+    }
 }
