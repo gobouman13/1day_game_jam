@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Back : MonoBehaviour
+public class Result : MonoBehaviour
 {
-
     public void BackTitle()
     {
         SceneManager.LoadScene(0);
@@ -15,5 +14,4 @@ public class Back : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
 }
