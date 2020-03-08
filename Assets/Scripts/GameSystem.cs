@@ -11,6 +11,8 @@ public class GameSystem : MonoBehaviour
     [SerializeField] private int nowModeLength;
     private bool gameMode;
     private int nowMode;
+    public PhaseTime TimeScript;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +24,12 @@ public class GameSystem : MonoBehaviour
     {
         if (gameMode)
         {
-            ChkModeTime();   
-            
+            ChkModeTime();
+            TimeScript.PhaseTimer();
         }
     }
 
-    void ChkModeTime()
+    public void ChkModeTime()
     {
         nowModeTime += Time.deltaTime;
         if (nowModeTime > defaultModeTime[nowMode])
