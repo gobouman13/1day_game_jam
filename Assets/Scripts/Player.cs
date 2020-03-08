@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	public GameObject mainCamera;
+
 	public float speed;
 	float angle,direction;
 	float weaponDirection;
@@ -13,6 +15,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = Camera.main.gameObject;
         speed=100;
 		frozen = false;
     }
@@ -33,6 +36,7 @@ public class Player : MonoBehaviour
 			float y = Input.GetAxis("Vertical");
 			GetComponent<Rigidbody2D>().velocity = new Vector2(x * speed * Time.deltaTime, y * speed * Time.deltaTime);
 		}else GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+		mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
 	}
 
 	void PlayerRotation()
