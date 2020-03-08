@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -8180378992820006406}
   m_Layer: 0
   m_Name: Mob
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,3 +212,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241da9f2261e13341adfad630a4c621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mobMoveMode: 0
+  Manager: {fileID: 0}
