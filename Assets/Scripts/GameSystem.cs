@@ -38,7 +38,7 @@ public class GameSystem : MonoBehaviour
             nowModeTime -= defaultModeTime[nowMode];
             nowMode++;
             if (nowMode >= nowModeLength) nowMode = 0;
-            //MobSpawnSystem.ChangeMobMode(nowMode);
+            MobSpawnSystem.ChangeMobMode(nowMode);
             Debug.Log("Changed Mode");
         }
     }
