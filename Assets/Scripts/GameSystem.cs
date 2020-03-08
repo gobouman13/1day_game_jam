@@ -12,7 +12,7 @@ public class GameSystem : MonoBehaviour
     public bool gameMode;
     public int nowMode;
 
-    private MobSpawn MobSpawnSystem;
+    public  MobSpawn MobSpawnSystem;
     public PhaseTime TimeScript;
     
     // Start is called before the first frame update
