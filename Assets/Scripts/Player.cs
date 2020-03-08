@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
 	public GameObject mainCamera;
 	GameObject gameSystem;
-
+	public GameSystem GSscript;
 	public float speed;
 	float angle,direction;
 	float weaponDirection;
@@ -85,5 +86,12 @@ public class Player : MonoBehaviour
         float dy = to.y - from.y;
         float rad = Mathf.Atan2(dy, dx);
         return rad * Mathf.Rad2Deg;
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Mob" && gameSystem.GetComponent<GameSystem>().nowMode == 0)
+        {
+			SceneManager.LoadScene(2);
+        }
     }
 }

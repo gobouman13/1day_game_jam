@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GotoTitle : MonoBehaviour
+public class GotoMain : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
-    public void OnClick()
+    // Update is called once per frame
+    void Update()
     {
-        SceneManager.LoadScene(0);
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
