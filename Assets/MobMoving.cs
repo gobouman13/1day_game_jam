@@ -18,4 +18,9 @@ public class MobMoving : MonoBehaviour
     {
         
     }
+
+    public void MoveTargetChange()
+    {
+        
+    }
 }
