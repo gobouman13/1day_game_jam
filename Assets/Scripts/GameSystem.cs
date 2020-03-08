@@ -9,17 +9,22 @@ public class GameSystem : MonoBehaviour
     private float nowModeTime;
 
     [SerializeField] private int nowModeLength;
+    private bool gameMode;
     private int nowMode;
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("CountDown");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        ChkModeTime();   
+        if (gameMode)
+        {
+            ChkModeTime();   
+            
+        }
     }
 
     void ChkModeTime()
@@ -33,4 +38,15 @@ public class GameSystem : MonoBehaviour
             Debug.Log("Changed Mode");
         }
     }
+
+    IEnumerator CountDown()
+    {
+        yield return new WaitForSeconds(3);
+        Debug.Log("Game Start");
+        gameMode = true;
+
+
+
+    }
+    
 }
