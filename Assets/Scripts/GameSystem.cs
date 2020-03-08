@@ -13,6 +13,8 @@ public class GameSystem : MonoBehaviour
     private int nowMode;
 
     private MobSpawn MobSpawnSystem;
+    public PhaseTime TimeScript;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +26,11 @@ public class GameSystem : MonoBehaviour
     {
         if (gameMode)
         {
-            ChkModeTime();   
-            
+            ChkModeTime();
         }
     }
 
-    void ChkModeTime()
+    public void ChkModeTime()
     {
         nowModeTime += Time.deltaTime;
         if (nowModeTime > defaultModeTime[nowMode])
