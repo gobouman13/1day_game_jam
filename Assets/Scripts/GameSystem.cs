@@ -12,7 +12,13 @@ public class GameSystem : MonoBehaviour
     public bool gameMode;
     public int nowMode;
 
+<<<<<<< HEAD
+	public int killCount;
+
+    private MobSpawn MobSpawnSystem;
+=======
     public  MobSpawn MobSpawnSystem;
+>>>>>>> 718d7c7a012c2eee662c4b35329c3b285b894583
     public PhaseTime TimeScript;
     
     // Start is called before the first frame update
@@ -48,8 +54,6 @@ public class GameSystem : MonoBehaviour
         yield return new WaitForSeconds(3);
         Debug.Log("Game Start");
         gameMode = true;
-
-
 
     }
     
