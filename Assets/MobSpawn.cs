@@ -64,9 +64,9 @@ public class MobSpawn : MonoBehaviour
 
     public void ChangeMobMode(int mode)
     {
-        foreach(var childObj in MobGroup.transform)
+        foreach(Transform childObj in MobGroup.transform)
         {
-            //childObj
+            childObj.gameObject.GetComponent<MobMoving>().mobMoveMode = mode;
         }
     }
 }
