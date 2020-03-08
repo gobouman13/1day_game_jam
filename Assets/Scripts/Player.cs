@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
 	public GameObject mainCamera;
-	GameObject gameSystem;
+	GameSystem gameSystem;
 	public GameSystem GSscript;
 	public float speed;
 	float angle,direction;
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         mainCamera = Camera.main.gameObject;
         speed=100;
 		frozen = false;
-		gameSystem = GameObject.Find("GameSystem");
+		gameSystem = GameObject.Find("GameSystem").GetComponent<GameSystem>();
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
 
 	void PlayerAtk()
 	{
-        if (Input.GetKeyDown(KeyCode.Z) && !frozen && gameSystem.GetComponent<GameSystem>().nowMode == 1){
+        if (Input.GetMouseButtonDown(0) && !frozen && gameSystem.nowMode == 1){
 			StartCoroutine(MoveWeapon());
 		}
 	}
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Mob" && gameSystem.GetComponent<GameSystem>().nowMode == 0)
+        if(other.gameObject.tag == "Mob" && gameSystem.nowMode == 0)
         {
 			SceneManager.LoadScene(2);
         }

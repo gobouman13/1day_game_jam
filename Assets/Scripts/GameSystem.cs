@@ -12,6 +12,8 @@ public class GameSystem : MonoBehaviour
     public bool gameMode;
     public int nowMode;
 
+	public int killCount;
+
     private MobSpawn MobSpawnSystem;
     public PhaseTime TimeScript;
     
@@ -48,8 +50,6 @@ public class GameSystem : MonoBehaviour
         yield return new WaitForSeconds(3);
         Debug.Log("Game Start");
         gameMode = true;
-
-
 
     }
     
