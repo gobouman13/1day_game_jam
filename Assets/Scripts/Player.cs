@@ -93,5 +93,5 @@ public class Player : MonoBehaviour
         {
 			SceneManager.LoadScene(2);
         }
-    }
+    } 
 }
