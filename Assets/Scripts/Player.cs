@@ -90,6 +90,6 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "Mob")
         {
 			SceneManager.LoadScene(2);
-        }
+		}
     }
 }
