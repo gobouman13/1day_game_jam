@@ -22,7 +22,7 @@ public class GameSystem : MonoBehaviour
     {
         if (gameMode)
         {
-            ChkModeTime();   
+            ChkModeTime();
             
         }
     }
