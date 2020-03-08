@@ -46,6 +46,8 @@ public class MobSpawn : MonoBehaviour
         }
         obj = Instantiate(MobBase, pos, Quaternion.identity);
         obj.GetComponent<AIDestinationSetter>().target = Player.transform;
+        obj.transform.parent = MobGroup.transform;        
+        obj.GetComponent<MobMoving>().Manager = this;
     }
 
     IEnumerator FirstSpawn()
@@ -58,5 +60,13 @@ public class MobSpawn : MonoBehaviour
             yield return new WaitForSeconds(spawnMobInterval);
         }
         
+    }
+
+    public void ChangeMobMode(int mode)
+    {
+        foreach(var childObj in MobGroup.transform)
+        {
+            //childObj
+        }
     }
 }
