@@ -65,7 +65,7 @@ public class MobMoving : MonoBehaviour
 
         while (!chk)
         {
-            float distanse = Random.Range(7f, 5f);
+            float distanse = Random.Range(7f, 15f);
             float degree = Random.Range(0f, 360f);
             pos = new Vector3(Mathf.Sin(Mathf.Deg2Rad*degree),Mathf.Cos(Mathf.Deg2Rad*degree))*distanse;
             ans = pos;

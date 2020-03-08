@@ -11,10 +11,17 @@ public class GameSystem : MonoBehaviour
     [SerializeField] private int nowModeLength;
     public bool gameMode;
     public int nowMode;
+<<<<<<< HEAD
 
 	public int killCount;
 
     private MobSpawn MobSpawnSystem;
+=======
+    
+	public int killCount;
+    
+    public  MobSpawn MobSpawnSystem;
+>>>>>>> 8a7492e26484ff72ad543f43b1f14a7d9d27673e
     public PhaseTime TimeScript;
     
     // Start is called before the first frame update
