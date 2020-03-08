@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Mob" && gameSystem.nowMode == 0)
+        if(other.gameObject.tag == "Mob" && gameSystem.nowMode == 0 && !frozen)
         {
 			SceneManager.LoadScene(2);
         }
