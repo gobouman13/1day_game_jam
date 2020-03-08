@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
 				}
 				second = tmpTime;
 			
-				transform.GetChild(0).gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2((float)nowTime / (float)maxTime * 720 + 300,50);
+				transform.GetChild(0).gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2((float)nowTime / (float)maxTime * 1620 + 300,100);
 				transform.GetChild(2).gameObject.GetComponent<Text>().text = minutes + ":" + second;
 				transform.GetChild(4).gameObject.GetComponent<Text>().text = countGame + " / " + maxGame;
 			}
