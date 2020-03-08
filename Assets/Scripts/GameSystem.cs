@@ -11,10 +11,6 @@ public class GameSystem : MonoBehaviour
     [SerializeField] private int nowModeLength;
     private bool gameMode;
     private int nowMode;
-
-    private MobSpawn MobSpawnSystem;
-    public PhaseTime TimeScript;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +23,11 @@ public class GameSystem : MonoBehaviour
         if (gameMode)
         {
             ChkModeTime();
+            
         }
     }
 
-    public void ChkModeTime()
+    void ChkModeTime()
     {
         nowModeTime += Time.deltaTime;
         if (nowModeTime > defaultModeTime[nowMode])
@@ -38,7 +35,6 @@ public class GameSystem : MonoBehaviour
             nowModeTime -= defaultModeTime[nowMode];
             nowMode++;
             if (nowMode >= nowModeLength) nowMode = 0;
-            //MobSpawnSystem.ChangeMobMode(nowMode);
             Debug.Log("Changed Mode");
         }
     }
