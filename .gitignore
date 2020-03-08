@@ -1,0 +1,103 @@
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+iUnityGenerated/
+Library/
+.pidb.meta
+*.pdb.meta
+*.csproj.meta
+sysinfo.txt
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.pdb
+.vs/
+
+# ================#
+# Rider generated #
+# ================#
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/shelf/*
+**/.idea/dictionaries
+**/.idea/**/dataSources/ 
+**/.idea/**/dataSources.ids
+**/.idea/**/dataSources.xml
+**/.idea/**/dataSources.local.xml
+**/.idea/**/encodings.xml
+**/.idea/**/sqlDataSources.xml
+**/.idea/**/dynamic.xm
+**/.idea/**/*.iml
+**/.idea/**/contentModel.xml
+**/.idea/**/modules.xml
+**/.idea/**/misc.xml
+/Assets/Plugins/Editor/JetBrains*
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# =============== #
+# Builds          #
+# =============== #
+*.apk
+*.unitypackage
+#Assets/Resources/BuildHashLog.txt
+
+# ================ #
+# Asset Hunter PRO #
+# ================ #
+SerializedBuildInfo/
+Assets/AH_Prefs/
+Assets/AH_Prefs.meta
+Assets/AH_Prefs/*
+
+# ============ #
+# for others   #
+# ============ #
+
+*.log #log files, for some plugins
+*.pyc #python bytecode cache, for some plugins.
+sysinfo.txt #Unity3D Generated File On Crash Reports
+#ProjectSettings/EditorBuildSettings.asset
+#ProjectSettings/ProjectSettings.asset
+#ProjectSettings/ProjectVersion.txt
+Icons/
+Logos/
+Editor/currentIcons/
+Assets/Editor/currentIcons/*
+Assets/Editor/currentIcons.meta
+Assets/Editor/PostprocessBuildPlayer
+Assets/Editor/PostprocessBuildPlayer.meta
+Assets/Resources/Logos.meta
+Assets/Oculus/VR/Plugins/1.40.0/Android/OVRPlugin.aar.meta
+Assets/Oculus/VR/Plugins/1.40.0/AndroidUniversal/OVRPlugin.aar.meta
+Assets/Plugins/Android/AndroidManifest.xml
+Assets/Plugins/Android/AndroidManifest.xml.meta
+Assets/StreamingAssets/BuildHashLog.txt
+Assets/StreamingAssets/BuildHashLog.txt.meta
+Assets/StreamingAssets/current_app.bin
+Assets/StreamingAssets/current_app.bin.meta
+Assets/Resources/OVRBuildConfig.asset
+Assets/Resources/OVRBuildConfig.asset.meta
