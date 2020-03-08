@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    [SerializeField] private float[] defaultModeTime;
+    [SerializeField] public float[] defaultModeTime;
 
-    private float nowModeTime;
+    public float nowModeTime;
 
     [SerializeField] private int nowModeLength;
     public bool gameMode;
     public int nowMode;
+
+	public int killCount;
+
+    private MobSpawn MobSpawnSystem;
+    
+>>>>>>> ef94865859777c23306e0d8aa4b2cd312827dcc9
 	public int killCount;
     
     public  MobSpawn MobSpawnSystem;
+>>>>>>> 8a7492e26484ff72ad543f43b1f14a7d9d27673e
     public PhaseTime TimeScript;
     
     // Start is called before the first frame update
