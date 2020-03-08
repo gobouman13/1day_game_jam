@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
 	public GameObject mainCamera;
-
+	public GameSystem GSscript;
 	public float speed;
 	float angle,direction;
 	float weaponDirection;
