@@ -25,7 +25,6 @@ public class GameSystem : MonoBehaviour
         if (gameMode)
         {
             ChkModeTime();
-            TimeScript.PhaseTimer();
         }
     }
 
