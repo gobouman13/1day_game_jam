@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-	GameObject gameSystem;
+	GameSystem gameSystem;
 
 	int maxTime,nowTime;
 	int minutes,second;
@@ -22,13 +22,13 @@ public class Timer : MonoBehaviour
 
 		maxGame = 4;
 		
-		gameSystem = GameObject.Find("GameSystem");
+		gameSystem = GameObject.Find("GameSystem").GetComponent<GameSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-		if(gameSystem.GetComponent<GameSystem>().gameMode){
+		if(gameSystem.gameMode){
 			comma += Time.deltaTime;
 			if(comma > 0){
 				comma--;
