@@ -54,8 +54,10 @@ public class Player : MonoBehaviour
 
 	void PlayerAtk()
 	{
-        if (Input.GetMouseButtonDown(0) && !frozen && gameSystem.nowMode == 1){
+        if (Input.GetMouseButtonDown(0) && !frozen && gameSystem.nowMode == 1)
+        {
 			StartCoroutine(MoveWeapon());
+			GetComponent<AudioSource>().Play();
 		}
 	}
 

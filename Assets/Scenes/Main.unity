@@ -1319,7 +1319,6 @@ GameObject:
   - component: {fileID: 909518809}
   - component: {fileID: 909518808}
   - component: {fileID: 909518807}
-  - component: {fileID: 909518810}
   - component: {fileID: 909518812}
   m_Layer: 0
   m_Name: Player
@@ -1407,7 +1406,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a283eab65f45b4d5cbf83792b377702d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 07c7c6c14615f458e93f241cc1811a16, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2164,6 +2163,7 @@ MonoBehaviour:
   nowMode: 0
   MobSpawnSystem: {fileID: 73034430}
   killCount: 0
+  MobSpawnSystem: {fileID: 73034430}
   TimeScript: {fileID: 0}
 --- !u!1 &1905540857
 GameObject:
