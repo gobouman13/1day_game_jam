@@ -63,17 +63,17 @@ public class Player : MonoBehaviour
     {
         transform.GetChild(1).gameObject.SetActive(true);
 		frozen = true;
-		weaponDirection = 60;
+		weaponDirection = 80;
 		for(int i = 0;i < 8;i++){
-			transform.GetChild(1).transform.rotation = Quaternion.Euler(0,0,angle + weaponDirection - 95);
-			weaponDirection -= 15;
+			transform.GetChild(1).transform.rotation = Quaternion.Euler(0,0,angle + weaponDirection - 110);
+			weaponDirection -= 20;
 			yield return new WaitForSeconds(0.01f);
 		}
 		yield return new WaitForSeconds(0.1f);
-		weaponDirection = -60;
+		weaponDirection = -80;
 		for(int i = 0;i < 8;i++){
-			transform.GetChild(1).transform.rotation = Quaternion.Euler(0,0,angle + weaponDirection - 95);
-			weaponDirection += 15;
+			transform.GetChild(1).transform.rotation = Quaternion.Euler(0,0,angle + weaponDirection - 110);
+			weaponDirection += 20;
 			yield return new WaitForSeconds(0.01f);
 		}
         transform.GetChild(1).gameObject.SetActive(false);
