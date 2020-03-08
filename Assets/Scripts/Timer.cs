@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+	GameObject gameSystem;
+
 	int maxTime,nowTime;
 	int minutes,second;
 	float comma;
 
 	int countGame,maxGame;
 
-	public bool gameStart;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +21,14 @@ public class Timer : MonoBehaviour
 		nowTime = maxTime;
 
 		maxGame = 4;
-
-		gameStart = true;
+		
+		gameSystem = GameObject.Find("GameSystem");
     }
 
     // Update is called once per frame
     void Update()
     {
-		if(gameStart){
+		if(gameSystem.GetComponent<GameSystem>().gameMode){
 			comma += Time.deltaTime;
 			if(comma > 0){
 				comma--;
@@ -42,7 +43,8 @@ public class Timer : MonoBehaviour
 				second = tmpTime;
 			
 				transform.GetChild(0).gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2((float)nowTime / (float)maxTime * 1620 + 300,100);
-				transform.GetChild(2).gameObject.GetComponent<Text>().text = minutes + ":" + second;
+				if(second < 10)transform.GetChild(2).gameObject.GetComponent<Text>().text = minutes + ":0" + second;
+				else transform.GetChild(2).gameObject.GetComponent<Text>().text = minutes + ":" + second;
 				transform.GetChild(4).gameObject.GetComponent<Text>().text = countGame + " / " + maxGame;
 			}
 		}

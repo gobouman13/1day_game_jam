@@ -9,8 +9,8 @@ public class GameSystem : MonoBehaviour
     private float nowModeTime;
 
     [SerializeField] private int nowModeLength;
-    private bool gameMode;
-    private int nowMode;
+    public bool gameMode;
+    public int nowMode;
 
     private MobSpawn MobSpawnSystem;
     public PhaseTime TimeScript;
@@ -38,7 +38,7 @@ public class GameSystem : MonoBehaviour
             nowModeTime -= defaultModeTime[nowMode];
             nowMode++;
             if (nowMode >= nowModeLength) nowMode = 0;
-            MobSpawnSystem.ChangeMobMode(nowMode);
+            //MobSpawnSystem.ChangeMobMode(nowMode);
             Debug.Log("Changed Mode");
         }
     }
