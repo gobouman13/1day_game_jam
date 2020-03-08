@@ -6,6 +6,7 @@ using Pathfinding;
 public class MobSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject MobBase;
+    [SerializeField] private GameObject TargetBase;
     [SerializeField] private GameObject Player;
 
     [SerializeField] private Vector3[] spawnPoints;
@@ -13,10 +14,12 @@ public class MobSpawn : MonoBehaviour
     [SerializeField] private int firstMobNum;
 
     [SerializeField] private GameObject MobGroup;
+    [SerializeField] private GameObject targetGroup;
 
     [SerializeField] private float spawnMobInterval;
     
     private GameObject obj;
+    
 
     float nowSpawnMobInterval;
     // Start is called before the first frame update
@@ -46,7 +49,8 @@ public class MobSpawn : MonoBehaviour
         }
         obj = Instantiate(MobBase, pos, Quaternion.identity);
         obj.GetComponent<AIDestinationSetter>().target = Player.transform;
-        obj.transform.parent = MobGroup.transform;        
+        obj.transform.parent = MobGroup.transform;
+        obj.GetComponent<MobMoving>().target = Instantiate(TargetBase).transform;
         obj.GetComponent<MobMoving>().Manager = this;
     }
 
@@ -67,6 +71,7 @@ public class MobSpawn : MonoBehaviour
         foreach(Transform childObj in MobGroup.transform)
         {
             childObj.gameObject.GetComponent<MobMoving>().mobMoveMode = mode;
+            childObj.gameObject.GetComponent<MobMoving>().MoveTargetChange();
         }
     }
 }
